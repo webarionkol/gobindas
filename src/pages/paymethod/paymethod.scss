@@ -1,0 +1,26 @@
+page-paymethod {
+	.item-md.item-block .item-inner{
+		border: none;
+	}
+	.item-md{
+		border-bottom: solid 1px #efe9e9;
+		font-size: 14px;
+		padding-left: 40px;
+	}
+	.item-ios{
+		border-bottom: solid 1px #efe9e9;
+		font-size: 14px;
+		padding-left: 40px;
+	}
+	img{
+		height: 25px;
+		position: absolute;
+		top: 10px;
+		left: 9px;
+	}
+	.paybyppl{
+		span{
+			float: right;
+		}
+	}
+}

@@ -1,0 +1,7 @@
+{
+  "name": "Govinda's",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}

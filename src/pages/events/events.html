@@ -1,0 +1,31 @@
+
+<ion-header>
+  <ion-navbar color='mainTheme'>
+    <ion-title>Events</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content>
+	<ion-list class='categry'>
+	  <ion-item *ngFor='let catItem of catData' (click)="openEvent(catItem)">
+	    <ion-thumbnail item-start>
+	      <img src="{{imgPath}}{{catItem.image}}">
+	    </ion-thumbnail>
+	    <h2>{{catItem.head}}</h2>
+	    <p>{{catItem.desc}} 
+        <br>
+        <span>Date: {{catItem.date}}</span>
+        <span>&nbsp;  Time: </span>
+        <span>{{catItem.time}}</span>
+        <br>
+        <span>Address: {{catItem.address}}</span>
+        <br>
+        <span>Postcode: {{catItem.postcode}}</span>
+        <br>
+        <span>Remarks: {{catItem.remarks}}</span>
+      </p>
+        
+	  </ion-item>
+	</ion-list>
+</ion-content>

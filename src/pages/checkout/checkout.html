@@ -1,0 +1,85 @@
+<ion-header>
+  <ion-navbar color='mainTheme'>
+    <ion-title>Checkout</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content *ngIf='!crtItmCnt'>
+	<div class="emptyDivs">
+		<img src="assets/imgs/shoppingEmpty.png">
+		 <h1>No Item Found !</h1>
+    	<p>We have hundreds of mouth watering dishes you can try. Taste one today by clicking on the button below</p>
+    	<div class="startOrder" (click)="gocategoryPage()">
+    		<span>Start Order</span>
+    	</div>
+	</div>
+</ion-content>
+
+
+<ion-content *ngIf='crtItmCnt'>
+	<ion-grid>
+
+		<div *ngFor='let itm of mycart' class="itemsCartDiv">
+			<ion-row>
+			    <ion-col col-6 class='itmName'><!-- <img src="assets/imgs/{{itm.productType}}" align="text-top">  -->{{itm.name}}<br>
+			    	<span>{{itm.productDesc}}</span></ion-col>
+			    
+			    <ion-col col-6 class='itmPrices'><span [innerHTML]='appSetng.currency'></span>{{itm.itmOnly}}x{{itm.qty}} = <span [innerHTML]='appSetng.currency'></span>{{itm.itemtotal}}</ion-col>
+			  </ion-row>
+
+			  <ion-row *ngFor='let slitm of itm.selections' class='selectionsLists'>
+			  	<ion-col col-8>
+			  		{{slitm.selectionName}}
+			  	</ion-col>
+			  	<ion-col col-4>
+			  		<span [innerHTML]='appSetng.currency'></span>{{slitm.selectionPrice}}x{{itm.qty}} = + <span [innerHTML]='appSetng.currency'></span>{{slitm.selectionPrice * itm.qty | number : fractionSize}}
+			  	</ion-col>
+			  </ion-row>
+
+			  
+		</div>
+	  
+
+
+	</ion-grid>
+
+	<div class='anySuggestField' *ngIf='extraSuggn'>
+		{{extraSuggn}}
+	</div>
+
+	<ion-grid class='priceDivs'>
+	  <ion-row>
+	    <ion-col col-8 class='mainPrcKey'>Item Total</ion-col>
+	    <ion-col col-4 class='priceValue'><span [innerHTML]='appSetng.currency'></span>{{crtTotal}}</ion-col>
+	  </ion-row>
+	  <ion-row *ngIf='discountTotal'>
+	    <ion-col col-8 class='mainPrcKey'[innerHTML]='discountTextValue'></ion-col>
+	    <ion-col col-4 class='priceValue' [innerHTML]='discountTotal'></ion-col>
+	  </ion-row>
+
+	  <ion-row *ngIf="orderType=='Delivery'">
+	   <ion-col col-8 class='mainPrcKey'>Delivery</ion-col>
+	    <ion-col col-4 class='priceValue'>+<span [innerHTML]='appSetng.currency'></span>{{v1DelvertCost}}</ion-col>
+	  </ion-row>
+	  
+	  <ion-row>
+	   <ion-col col-8 class='mainPrcKey'>To pay</ion-col>
+	    <ion-col col-4 class='priceValue'><span [innerHTML]='appSetng.currency'></span>{{payAmount}}</ion-col>
+	  </ion-row>
+
+	</ion-grid>
+</ion-content>
+
+
+
+<ion-footer *ngIf='crtItmCnt'>
+  <ion-grid>
+  <ion-row>
+    <ion-col col-6 class='left' (click)="gocategoryPage()">Continue Shopping</ion-col>
+     <ion-col col-6 class='right' (click)="goNextPage()">Make Payment</ion-col>
+  </ion-row>
+</ion-grid>
+</ion-footer>
+
+

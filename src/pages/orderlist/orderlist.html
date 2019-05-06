@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-navbar color='mainTheme'>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>My Orders</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content>
+	<div class="myOrders {{itm.colorcss}} animated bounceInLeft" *ngFor='let itm of catrData' (click)="goOrdetails(itm.orderId);">
+		<div class="orderNumber">
+			<span>{{itm.orderType}}</span><br>#{{itm.orderId}}
+		</div>
+		<div class="orderAmiunt">
+			<span>{{itm.orderStatus}}</span><br><b [innerHTML]='appSetng.currency'></b>{{itm.payAmount}}
+		</div>
+		<div class="clear"></div>
+	</div>
+</ion-content>

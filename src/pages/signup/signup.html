@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-navbar color='mainTheme'>
+    <ion-title>Sign Up</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content>
+	<ion-list>
+
+	  <ion-item>
+	    <ion-label floating>Full Name</ion-label>
+	    <ion-input type="text" [(ngModel)]="data.fullName"></ion-input>
+	  </ion-item>
+
+	  <ion-item>
+	    <ion-label floating>Mobile Number (This will be your User ID)</ion-label>
+	    <ion-input type="tel" [(ngModel)]="data.mobile"></ion-input>
+	  </ion-item>
+
+	  <ion-item>
+	    <ion-label floating>Email</ion-label>
+	    <ion-input type="email" [(ngModel)]="data.email" required></ion-input>
+	  </ion-item>
+
+	   <ion-item>
+	    <ion-label floating>Password</ion-label>
+	    <ion-input type="password" [(ngModel)]="data.password"></ion-input>
+	  </ion-item>
+
+	  <ion-item>
+	    <ion-label floating>Address</ion-label>
+	    <ion-input type="text" [(ngModel)]="data.address"></ion-input>
+	  </ion-item>
+	  <ion-item>
+	    <ion-label floating>Postcode</ion-label>
+	    <ion-input type="text" [(ngModel)]="data.postcode"></ion-input>
+	  </ion-item>
+
+	</ion-list>
+</ion-content>
+<ion-footer (click)="checkExist(data)">
+  Sign Up
+</ion-footer>

@@ -1,0 +1,185 @@
+page-orderdetails {
+	.brandName{
+		position: relative;
+		width: 100%;
+		height: 20px;
+    	background: #f5da41;
+		margin: 10px 0 20px 0;
+		line-height: 20px;
+		span{
+			position: absolute;
+		    background: #fff;
+		    padding: 0 15px;
+		    z-index: 99;
+		    right: 20px;
+		    top: 0;
+		    color: #000;
+		    font-size: 12px;
+		    height: 20px;
+		    text-transform: uppercase;
+		}
+	}
+	.invoiceTo{
+		width: 50%;
+		float: left;
+		padding-left: 9px;
+		font-size: 12px;
+		p{
+			padding: 0;
+			margin: 0 0 3px 0;
+			text-transform: uppercase;
+		}
+	}
+	.orderNumTrype{
+		width: 50%;
+		float: left;
+		padding-right: 9px;
+		text-align: right;
+		font-size: 12px;
+		p{
+			padding: 0;
+			margin: 0 0 3px 0;
+			text-transform: uppercase;
+			font-weight: bold;
+		}
+		span{
+			text-transform: uppercase;
+		}
+	}
+	.clear{
+		clear: both;
+	}
+	.itmHeadasd{
+		font-size: 12px;
+		padding: 7px 9px;
+		margin: 15px 0 2px 0;
+		background: #f7f7f7;
+	}
+	.itemHead{
+		width: 50%;
+		float: left;
+	}
+	.priceHead{
+		width: 20%;
+		float: left;
+	}
+	.qtyHead{
+		width: 10%;
+		float: left;
+		text-align: center;
+	}
+	.totalHead{
+		width: 20%;
+		font-size: 12px;
+		float: left;
+		text-align: right;
+	}
+
+
+
+	.itemdesc{
+		width: 50%;
+		float: left;
+		p{
+			margin:0;
+			padding: 0;
+			font-size: 10px;
+			color: #4c6286;
+		}
+	}
+	.pricedesc{
+		width: 20%;
+		float: left;
+		p{
+			margin:0;
+			padding: 0;
+			font-size: 10px;
+			color: #4c6286;
+		}
+	}
+	.qtydesc{
+		width: 10%;
+		float: left;
+		text-align: center;
+		p{
+			margin:0;
+			padding: 0;
+			font-size: 10px;
+			color: #4c6286;
+		}
+	}
+	.totaldesc{
+		width: 20%;
+		font-size: 12px;
+		float: left;
+		text-align: right;
+		p{
+			margin:0;
+			padding: 0;
+			font-size: 10px;
+			color: #4c6286;
+		}
+	}
+
+	.itmdex{
+		font-size: 11px;
+		padding: 5px 9px;
+		border-bottom: solid 1px #f7f5f5;
+	}
+	.subtotal{
+		float: right;
+		width: 50%;
+		font-size: 11px;
+		padding: 7px 9px 7px 0;
+		border-bottom: solid 1px #dcd8d8;
+		span{
+			float: right;
+
+		}
+		b{
+			font-weight: normal;
+		}
+	}
+	.extraCmnt{
+		font-size: 11px;
+		padding: 5px 9px;
+		border-top: solid 1px #fbf6d8;
+		border-bottom: solid 1px #fbf6d8;
+		margin: 7px 0;
+		color: #5a5a5a;
+	}
+	.deliveTos{
+		font-size: 12px;
+		position: relative;
+		padding-left: 20px;
+		img{
+			height: 50px;
+			position: absolute;
+			right: 9px;
+			top: 20%;
+		}
+	}
+
+
+	.delToTxt{
+		position: relative;
+		width: 100%;
+		height: 12px;
+    	background: #f5da41;
+		margin: 10px 0 5px 0;
+		line-height: 12px;
+		span{
+			position: absolute;
+		    background: #fff;
+		    padding: 0 15px;
+		    z-index: 99;
+		    left: 20px;
+		    top: 0;
+		    color: #000;
+		    font-size: 11px;
+		    height: 12px;
+		    text-transform: uppercase;
+		}
+	}
+	
+}

@@ -1,0 +1,14 @@
+
+<ion-content>
+<div *ngFor="let brnItem of brnch" (click)="setUserBranch(brnItem)">
+	<div class="brnImage">
+		<img src="{{imgPath}}{{brnItem.image}}">
+		<div class="name">
+			{{brnItem.branchName}}
+		</div>
+		<div class="adddress">
+			{{brnItem.addressLineone}}<!--  <span>{{brnItem.distance}} Km</span> -->
+		</div>
+	</div>
+</div>
+</ion-content>

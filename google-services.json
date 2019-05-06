@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "596671996171",
+    "firebase_url": "https://govindas-1ebe9.firebaseio.com",
+    "project_id": "govindas-1ebe9",
+    "storage_bucket": "govindas-1ebe9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:596671996171:android:94017ff1f04f72d9",
+        "android_client_info": {
+          "package_name": "com.mobileappformyrestaurant.govindas"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "596671996171-665l73odo6of88sragljta55tcr3rfla.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC_WQgMqePiY8ufNsMfAx_L50KYqU37Cws"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

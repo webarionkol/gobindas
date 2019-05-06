@@ -1,0 +1,64 @@
+page-addressbook {
+	ion-card {
+    position: relative;
+    text-align: center;
+    img{
+    	width: 100%;
+    }
+  }
+
+  .card-title {
+    position: absolute;
+    top: 14%;
+    font-size: 1.4em;
+    width: 50%;
+    font-weight: bold;
+    text-align: left;
+    left: 15px;
+    span{
+      font-size: 1.2em;
+    }
+  }
+
+  .card-subtitle {
+    font-size: 1.0em;
+    position: absolute;
+    top: 14%;
+    width: 50%;
+    right: 15px;
+    text-align: right;
+  }
+  .forSlidingDivs{
+    margin: 10px;
+    .item-md{
+      padding: 0;
+    }
+    .card-md{
+      margin: 0;
+      width: 100%;
+    }
+    .card-ios{
+      margin: 0;
+      width: 100%;
+    }
+    .item-md.item-block .item-inner{
+      padding: 0;
+    }
+    .label-md{
+      margin: 0;
+    }
+
+     .item-ios{
+      padding: 0;
+    }
+    .item-ios.item-block .item-inner{
+      padding: 0;
+    }
+    .label-ios{
+      margin: 0;
+    }
+  }
+  ion-label{
+        white-space: normal;
+  }
+}

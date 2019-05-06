@@ -1,0 +1,54 @@
+<ion-header>
+  <ion-navbar color='mainTheme'>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Catering Booking</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+
+	<div [innerHTML]='catrData?.heading' class="heading"></div>
+	<div [innerHTML]='catrData?.description' class="description"></div>
+
+
+  <div class="myForms">
+    <ion-label fixed>Name</ion-label>
+    <ion-input type="text" [(ngModel)]="data.name"></ion-input>
+
+    <ion-label fixed>Contact Number</ion-label>
+    <ion-input type="tel" [(ngModel)]="data.mobile"></ion-input>
+
+    <div class="relatives">
+      <ion-label fixed>Event Date</ion-label>
+      <ion-datetime displayFormat="DDD, DD/MMM/YYYY" min='{{startDate}}' pickerFormat="YYYY-MMM-DD" [(ngModel)]="data.eventdate"></ion-datetime>
+    </div>
+
+
+    <div class="relatives">
+      <ion-label fixed>Event Time</ion-label>
+      <ion-datetime displayFormat="hh:mm:A" pickerFormat="hh:mm:A" [(ngModel)]="data.eventtime"></ion-datetime>
+    </div>
+
+    <ion-label fixed>Event for</ion-label>
+    <ion-input type="text" [(ngModel)]="data.eventfor"></ion-input>
+
+    <ion-label fixed>Any Budget</ion-label>
+    <ion-input type="tel" [(ngModel)]="data.budget"></ion-input>
+    
+
+    
+  </div>
+
+
+</ion-content>
+
+<ion-footer>
+  <ion-grid>
+  <ion-row>
+    <ion-col col-12 (click)="bookNowPage(data)">Book Now</ion-col>
+  </ion-row>
+</ion-grid>
+</ion-footer>

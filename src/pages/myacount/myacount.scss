@@ -1,0 +1,105 @@
+page-myacount {
+	.addressAcnt{
+		padding: 0 9px;
+		font-size: 13px;
+		text-transform: uppercase;
+		margin-top: 10px;
+		span{
+			float: right;
+			color: color($colors, mainTheme);
+		}
+	}
+	.addNameCnt{
+		padding: 0 9px;
+		font-size: 12px;
+		color: color($colors, light);
+		border-bottom: solid 1px #dcdcdc;
+		padding-bottom: 15px;
+		margin-bottom: 10px;
+	}
+	.clear{
+		clear: both;
+	}
+	.myOrders{
+		font-size: 13px;
+		padding: 7px 9px;
+		border-bottom: solid 1px #dcdcdc;
+		.orderNumber{
+			float:left;
+			width: 50%;
+			span{
+				font-size: 8px;
+				text-transform: uppercase;
+			}
+		}
+		.orderAmiunt{
+			float: right;
+			width: 50%;
+			text-align: right;
+			span{
+				font-size: 8px;
+				text-transform: uppercase;
+			}
+			b{
+				font-weight: normal;
+			}
+		}
+	}
+	.newOrder{
+		color: #41658c;
+	}
+	.acceptOrder{
+		color: #95b146;
+	}
+	.processOrder{
+		color: #2d8c8e;
+	}
+	.completedOrder{
+		color: #607b5f;
+	}
+	.rejectedOrder{
+		color: #bfaaa7;
+	}
+
+	.moreOrders{
+		padding-right: 9px;
+		margin: 10px 0;
+		font-size: 10px;
+		height: 40px;
+		span{
+			float: right;
+			color: #FFF;
+			background: color($colors, mainTheme);
+			line-height: 30px;
+			text-transform: uppercase;
+			padding: 0 15px;
+		}
+	}
+	.ordersMenu{
+		font-size: 13px;
+		text-transform: uppercase;
+		ul{
+			margin: 0;
+			padding: 0;
+			li{
+				list-style: none;
+				position: relative;
+				line-height: 45px;
+				border-bottom: solid 1px #dcdcdc;
+				padding-left: 39px;
+				padding-right: 9px;
+				img{
+					height: 19px;
+					position: absolute;
+					left: 12px;
+					top: 12px;
+				}
+				span{
+					float: right;
+					font-size: 12px;
+					text-transform: none;
+				}
+			}
+		}
+	}
+}

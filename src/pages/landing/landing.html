@@ -1,0 +1,48 @@
+<ion-header no-border>
+  <ion-navbar>
+    <ion-buttons end>
+      <button ion-button (click)="startApp()" color="app-color">Skip</button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content no-bounce>
+  <ion-slides #slides pager class='landingSlide' autoplay="5000" loop="true" speed="1000">
+
+    <ion-slide>
+      <img src="./assets/imgs/delicn.png" class="slide-image"/>
+      <h2 class="slide-title">
+        Welcome to <b>Ask a Pharmacist!</b>
+      </h2>
+      <p>
+        Our App allows you to hold confidential real-time chat consultations with a pharmacist completely FREE!!
+      </p>
+    </ion-slide>
+
+    <ion-slide>
+      <img src="./assets/imgs/delicn.png" class="slide-image"/>
+      <h2 class="slide-title" >BUY!</h2>
+      <p>You can also purchase all your medical and healthcare products simply and easily through the app</p>
+    </ion-slide>
+
+    <ion-slide>
+      <img src="./assets/imgs/delicn.png" class="slide-image"/>
+      <h2 class="slide-title">SIMPLE!</h2>
+      <p>We can also provide presciption only treatments for a number of conditions.</p>
+      <p>Step 1 : Choose your product(s)<br>
+      Step 2 : Answer a short medical questionnaire<br>
+      Step 3 : Make payment</p>
+    </ion-slide>
+
+    <ion-slide>
+      <img src="./assets/imgs/delicn.png" class="slide-image"/>
+      <h2 class="slide-title">SAFE AND SECURE!</h2>
+      <p>One of our clinicians will issue a presciption after assessing your questionnaire to ensure it is suitable and safe for your use. Your item is dispensed by our pharmacy team and posted out to you securely and discreetly</p>
+      <button ion-button icon-end large clear color="app-color" (click)="startApp()">
+        Continue
+        <ion-icon name="arrow-forward" color="app-color"></ion-icon>
+      </button>
+    </ion-slide>
+
+  </ion-slides>
+</ion-content>

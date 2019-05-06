@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-navbar color='mainTheme'>
+    <ion-title>Select a delivery address</ion-title>
+
+    <ion-buttons end class='topCartBtn'>
+      <button ion-button icon-only (click)="addAddress()">
+        <ion-icon name="add"></ion-icon>
+      </button>
+    </ion-buttons>
+
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content class="card-background-page">
+
+<ion-list>
+  <ion-item *ngFor='let adItem of adrData' (click)='selectAddrs(adItem)'>
+      <h2>Deliver to {{adItem.addresstype}}</h2>
+      <p><strong>{{adItem.name}}</strong>, {{adItem.address}}, {{adItem.nearestland}}, {{adItem.postcode}}</p>
+      <p>{{adItem.mobile}}</p>
+    </ion-item>
+</ion-list>
+	  
+</ion-content>

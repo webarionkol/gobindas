@@ -1,0 +1,19 @@
+
+<ion-header>
+  <ion-navbar color='mainTheme'>
+    <ion-title>Select a Option</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<!-- 
+<p>Your order contains an item that is an Eat In Item. You cannot chose Collection or Delivery Option. Please confirm you wish to Eat In at the restaurant.</p> -->
+<ion-content>
+	<div class="orderType" (click)="getOrderType('Takeaway')">
+		<img src="assets/imgs/colletionicons.jpg">
+		<p>I'd like to collect from restaurant</p>
+	</div>
+	<div class="orderType" (click)="getOrderType('Delivery')">
+		<img src="assets/imgs/deleveryicons.jpg">
+		<p>I'd like it delivered to my address</p>
+	</div>
+</ion-content>

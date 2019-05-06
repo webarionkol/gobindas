@@ -1,0 +1,75 @@
+<ion-header>
+  <ion-navbar color='mainTheme'>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Table Booking</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+
+	<div [innerHTML]='catrData?.heading' class="heading"></div>
+	<div [innerHTML]='catrData?.description' class="description"></div>
+
+
+  <div class='bookignLists' *ngFor='let itm of bkng'>
+    <div class="nameemail">
+      <strong>{{itm.customername}}</strong><br>
+      {{itm.mobile}}
+    </div>
+    <div class="datetime">
+      <span>{{itm.status}}</span><br>{{itm.date}}
+      
+    </div>
+    <div class="numperson">
+      <span>guest</span><br>{{itm.person}}
+    </div>
+    <div class="clear"></div>
+    <div class="notes">
+      {{itm.desc}}
+    </div>
+    
+  </div>
+
+
+
+
+	<div class="logBtns" (click)='gologin()' *ngIf='!logChk'>
+		Please login to book a table
+	</div>
+
+  <div class="myForms" *ngIf='logChk'>
+
+    <div class="relatives">
+      <ion-label fixed>Booking Date</ion-label>
+      <ion-datetime displayFormat="DDD, DD/MMM/YYYY" min='{{startDate}}' pickerFormat="YYYY-MMM-DD" [(ngModel)]="data.bookingdate"></ion-datetime>
+    </div>
+
+
+    <div class="relatives">
+      <ion-label fixed>Booking Time</ion-label>
+      <ion-datetime displayFormat="hh:mm:A" pickerFormat="hh:mm:A" [(ngModel)]="data.bookingtime"></ion-datetime>
+    </div>
+
+    <ion-label fixed>Number of Person</ion-label>
+    <ion-input type="tel" [(ngModel)]="data.person"></ion-input>
+
+    <ion-label fixed>Any requirement</ion-label>
+    <ion-input type="text" [(ngModel)]="data.requirement"></ion-input>
+    
+
+    
+  </div>
+
+
+</ion-content>
+
+<ion-footer *ngIf='logChk'>
+  <ion-grid>
+  <ion-row>
+    <ion-col col-12 (click)="bookNowPage(data)">Book Now</ion-col>
+  </ion-row>
+</ion-grid>
+</ion-footer>

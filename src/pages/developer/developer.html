@@ -1,0 +1,58 @@
+<ion-header>
+  <ion-navbar color='mainTheme'>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>About Developer</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+
+<ion-content padding>
+	<div class="devLogos">
+		<img src="assets/imgs/mobile-app-takeway-logo.png">
+	</div>
+	<div class="addLoc" (click)='openNavigation(catrData?.location);'>
+		<ion-icon name="pin"></ion-icon> {{catrData?.location}}
+	</div>
+
+	<div class="phone" *ngIf='catrData?.phone' (click)='callNumber(catrData?.phone);'>
+		<ion-icon name="call"></ion-icon> {{catrData?.phone}}
+	</div>
+
+	<div class="phone phntw" *ngIf='catrData?.phone2' (click)='callNumber(catrData?.phone2);'>
+		<ion-icon name="call"></ion-icon> {{catrData?.phone2}}
+	</div>
+
+	<div class="phone potrh" *ngIf='catrData?.phone3' (click)='callNumber(catrData?.phone3);'>
+		<ion-icon name="call"></ion-icon> {{catrData?.phone3}}
+	</div>
+
+	<div class="phone emlclr" *ngIf='catrData?.email' (click)='callEmail(catrData?.email);'>
+		<ion-icon name="mail"></ion-icon> {{catrData?.email}}
+	</div>
+
+
+
+	<div class="website" *ngIf='catrData?.website' (click)='callWeb(catrData?.website);'>
+		<ion-icon name="globe"></ion-icon>
+	</div>
+
+	<div class="fb" *ngIf='catrData?.fb' (click)='callWeb(catrData?.fb);'>
+		<ion-icon name="logo-facebook"></ion-icon>
+	</div>
+
+	<div class="twitter" *ngIf='catrData?.twitter' (click)='callWeb(catrData?.twitter);'>
+		<ion-icon name="logo-twitter"></ion-icon>
+	</div>
+
+	<div class="linkedin" *ngIf='catrData?.linkedln' (click)='callWeb(catrData?.linkedln);'>
+		<ion-icon name="logo-linkedin"></ion-icon>
+	</div>
+
+	<div class="instragram" *ngIf='catrData?.instragram' (click)='callWeb(catrData?.instragram);'>
+		<ion-icon name="logo-instagram"></ion-icon>
+	</div>
+
+</ion-content>

@@ -1,0 +1,51 @@
+<ion-header>
+  <ion-navbar color='mainTheme'>
+    <ion-title>Edit Address</ion-title>
+
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content>
+	<ion-list>
+
+	  <ion-item>
+	    <ion-label floating>Address Type (e.g.: Home / Office)</ion-label>
+	    <ion-input type="text" [(ngModel)]="data.addresstype"></ion-input>
+	  </ion-item>
+
+	  <ion-item>
+	    <ion-label floating>Contact Name</ion-label>
+	    <ion-input type="text" [(ngModel)]="data.name"></ion-input>
+	  </ion-item>
+
+	  <ion-item>
+	    <ion-label floating>Mobile Number</ion-label>
+	    <ion-input type="tel" [(ngModel)]="data.mobile"></ion-input>
+	  </ion-item>
+
+	  <ion-item>
+	    <ion-label floating>Email</ion-label>
+	    <ion-input type="email" [(ngModel)]="data.email"></ion-input>
+	  </ion-item>
+
+	  <ion-item>
+	    <ion-label floating>Full Address</ion-label>
+	    <ion-input type="text" [(ngModel)]="data.address"></ion-input>
+	  </ion-item>
+
+	  <ion-item>
+	    <ion-label floating>Nearest landmark</ion-label>
+	    <ion-input type="text" [(ngModel)]="data.nearestland"></ion-input>
+	  </ion-item>
+
+	  <ion-item>
+	    <ion-label floating>Postcode</ion-label>
+	    <ion-input type="text" [(ngModel)]="data.postcode"></ion-input>
+	  </ion-item>
+
+	</ion-list>
+</ion-content>
+<ion-footer (click)="savethisAddress(data)">
+  Save
+</ion-footer>

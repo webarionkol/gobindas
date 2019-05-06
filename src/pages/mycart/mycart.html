@@ -1,0 +1,99 @@
+
+<ion-header>
+  <ion-navbar color='mainTheme' hideBackButton>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>My Cart</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content *ngIf='!crtItmCnt'>
+	<div class="emptyDivs">
+		<img src="assets/imgs/shoppingEmpty.png">
+		 <h1>No Item Found !</h1>
+    	<p>We have hundreds of mouth watering dishes you can try. Taste one today by clicking on the button below</p>
+    	<div class="startOrder" (click)="gocategoryPage()">
+    		<span>Start Order</span>
+    	</div>
+	</div>
+</ion-content>
+
+
+<ion-content *ngIf='crtItmCnt'>
+	<ion-grid>
+		<div *ngFor='let itm of mycart' class="itemsCartDiv">
+			<ion-row>
+			    <ion-col col-7 class='itmName'><!-- <img src="assets/imgs/{{itm.productType}}" align="text-top">  -->{{itm.name}}<br>
+			    	<span>{{itm.productDesc}}</span>
+			    	
+			    </ion-col>
+			    <ion-col col-3>
+			    	<div class="addCartBtnQtY">
+			    		<span class='leftMinus' (click)="minusqnty(itm)">
+			    			<ion-icon name="remove"></ion-icon>
+			    		</span>
+			    		<span class='numberQty'>{{itm.qty}}</span>
+			    		<span class='rightMiNus' (click)="plusqnty(itm)">
+			    			<ion-icon name="add"></ion-icon>
+			    		</span>
+			    		<div class="clear"></div>
+			    	</div>
+			    </ion-col>
+			    <ion-col col-2 class='itmPrices'><span [innerHTML]='appSetng.currency'></span>{{itm.itemtotal}}</ion-col>
+			  </ion-row>
+			  <ion-row *ngFor='let slitm of itm.selections' class='selectionsLists'>
+			  	<ion-col col-8>
+			  		{{slitm.selectionName}}
+			  	</ion-col>
+			  	<ion-col col-4>
+			  		+ <span [innerHTML]='appSetng.currency'></span>{{slitm.selectionPrice}}
+			  	</ion-col>
+			  </ion-row>
+		</div>
+	</ion-grid>
+
+	<div class='anySuggestField'>
+		<ion-input type="text" [(ngModel)]="extraComments" (keyup)='setComments(extraComments)' placeholder='Any suggestions? We will pass on it..'></ion-input>
+	</div>
+	<div class='applyCoupon' *ngIf="appSetng.offer=='ON'">
+		<div (click)='applyCoupon()' *ngIf='!cpnApplyed'>
+			<img src="assets/imgs/offeriCon.png" align="texttop">	Apply Coupon <span><ion-icon name="arrow-forward"></ion-icon></span>
+		</div>
+
+		<div *ngIf='cpnApplyed'>
+			<img src="assets/imgs/offeriCon.png" align="texttop">	{{cpnApplyed}} <span class='cpnallldTxt'>(Coupon applyed)</span> <span (click)='removeCoupon()'><ion-icon name="close"></ion-icon></span>
+		</div>
+	
+
+	</div>
+
+	<ion-grid class='priceDivs'>
+	  <ion-row>
+	    <ion-col col-8 class='mainPrcKey'>Item Total</ion-col>
+	    <ion-col col-4 class='priceValue'><span [innerHTML]='appSetng.currency'></span>{{crtTotal}}</ion-col>
+	  </ion-row>
+	  <ion-row *ngIf='cpnApplyed'>
+	    <ion-col col-8 class='mainPrcKey'[innerHTML]='discountTextValue'></ion-col>
+	    <ion-col col-4 class='priceValue' [innerHTML]='discountTotal'></ion-col>
+	  </ion-row>
+	  <ion-row *ngIf='cpnApplyed'>
+	    <ion-col col-8 class='mainPrcKey'>To pay</ion-col>
+	    <ion-col col-4 class='priceValue'><span [innerHTML]='appSetng.currency'></span>{{payAmount}}</ion-col>
+	  </ion-row>
+	</ion-grid>
+</ion-content>
+
+
+
+<ion-footer *ngIf='crtItmCnt'>
+  <ion-grid>
+  <ion-row>
+    <ion-col col-6 class='left' (click)="gocategoryPage()">Continue Shopping</ion-col>
+     <ion-col col-6 class='right' (click)="goNextPage(payAmount)">proceed</ion-col>
+  </ion-row>
+</ion-grid>
+</ion-footer>
+
+

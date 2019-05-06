@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-navbar color='mainTheme'>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Available Offers</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+	<div class="offerList" *ngFor="let items of offerData">
+		<div class="offIcn">
+			<img src="assets/imgs/offeriCon.png">
+		</div>
+		<div class="offCode" (click)='offerCopy(items.couponCode)'>
+			{{items.couponCode}}
+		</div>
+		<div class="clear"></div>
+
+		<p>{{items.offerName}}</p>
+		{{items.offerDescription}}
+	</div>
+</ion-content>

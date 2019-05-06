@@ -1,0 +1,196 @@
+page-subsubcategory {
+	.list-md .item-block .item-inner{
+	  border: none !important;
+	}
+	.item-md{
+		box-shadow: 0 2px 2px #f5f5f5;
+		margin-bottom: 7px;
+		padding-left: 5px;
+	}
+	.item-md ion-thumbnail[item-start]{
+		margin-right: 10px;
+		display: flex;
+		vertical-align: middle;
+		min-height: 60px;
+		height: 60px;
+		img{
+			height: auto !important;
+		}
+
+	}
+	.list-ios .item-block .item-inner{
+	  border: none !important;
+	}
+	.item-ios{
+		box-shadow: 0 2px 2px #f5f5f5;
+		margin-bottom: 7px;
+		padding-left: 5px;
+	}
+	.item-ios ion-thumbnail[item-start]{
+		margin-right: 10px;
+		display: flex;
+		vertical-align: middle;
+		min-height: 60px;
+		height: 60px;
+		img{
+			height: auto !important;
+		}
+
+	}
+	ion-label{
+		text-overflow: unset;
+		white-space: normal;
+		p{
+			font-size: 13px !important;
+		}
+	}
+	p{
+		span{
+			font-size: 10px;
+			color: #436d88;
+		}
+	}
+	.itemImg{
+		width: 100%;
+		height: 90px;
+		overflow: hidden;
+		margin-bottom: 9px;
+		img{
+			height: 90px;
+			min-width: 100%;
+		}
+	}
+	.itemName{
+		font-size: 12px;
+		img{
+			width: 10px;
+		}
+	}
+	.itenDesc{
+		font-size: 11px;
+		color: #8a8888;
+		margin-bottom: 9px;
+	}
+	ion-col{
+		margin-bottom: 9px;
+	}
+	.itemPrice{
+		float: left;
+		width: 40%;
+		span{
+			font-size: 10px;
+		}
+	}
+	.addtocartBtn{
+		float: right;
+		font-size: 10px;
+		text-transform: uppercase;
+		span{
+			border: solid 1px color($colors, mainTheme);
+			padding: 5px 15px;
+			color: color($colors, mainTheme);
+		}
+		ion-icon{
+			font-size: 9px;
+		}
+	}
+	.itemMainDivs{
+		margin-bottom: 20px;
+	}
+
+	.addCartBtn{
+		border: solid 1px color($colors, mainTheme);
+		font-size: 11px;
+		padding: 5px 21px;
+		color: color($colors, mainTheme);
+		position: relative;
+		text-align: center;
+		transition: visibility 0s, opacity 0.5s linear;
+		ion-icon{
+			position: absolute;
+			right: 3px;
+			top: 0px;
+			font-size: 10px;
+			color: color($colors, secondary);
+		}
+	}
+	.addCartBtnQtY{
+		display: none;
+		font-size: 11px;
+		color: color($colors, mainTheme);
+		border: solid 1px color($colors, mainTheme);
+		padding: 2px;
+		transition: visibility 0s, opacity 0.5s linear;
+		.leftMinus{
+			ion-icon{
+			    padding: 3px 9px 3px 7px;
+			    margin-right: 0;
+			    color: color($colors, secondary);
+			}
+		}
+		.rightMiNus{
+			ion-icon{
+			    padding: 3px 7px 3px 9px;
+			    margin-left: 0;
+			    color: color($colors, secondary);
+			}
+		}
+		.numberQty{
+			
+		}
+	}
+	.itemPriceDivs{
+		text-align: center;
+		margin-bottom: 7px;
+	}
+	.isOfferDiv{
+		width: 90px;
+	    height: 20px;
+	    border: solid 1px #aaefa6;
+	    font-size: 10px;
+	    line-height: 20px;
+	    padding: 0 5px 0 0;
+	    background: #f2fffa;
+	    span{
+	    	background: #c0eac4;
+	    	padding: 4px 9px;
+	    }
+	}
+	.customizeoption{
+		font-size: 9px;
+	    color: #868686;
+	    margin-top: 3px;
+	}
+	.itemIcnos{
+		img{
+			height: 13px;
+		}
+	}
+	ion-footer{
+		background: color($colors, secondary);
+		color: #FFF;
+		font-size: 11px;
+		font-weight: bold;
+		padding: 0 3px;
+		.extraNots{
+			font-size: 9px;
+			font-weight: normal;
+		}
+		ion-col{
+			padding: 4px 0;
+		}
+		[col-6]{
+			padding: 4px 0;
+		}
+	}
+	.viewFtrCrt{
+		text-align: right;
+		font-size: 12px;
+		font-weight: bold;
+		text-transform: uppercase;
+		line-height: 26px;
+	}
+	.margnLftRht{
+		margin: 0 5px;
+	}
+}

@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-navbar color='mainTheme'>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Complete</ion-title>
+
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+
+	<div class="check_mark">
+	  <div class="sa-icon sa-success animate">
+	    <span class="sa-line sa-tip animateSuccessTip"></span>
+	    <span class="sa-line sa-long animateSuccessLong"></span>
+	    <div class="sa-placeholder"></div>
+	    <div class="sa-fix"></div>
+	  </div>
+	</div>
+
+	<div class="ordernumber">
+		Your order number : <strong>{{ordernumber}}</strong>
+	</div>
+	<div [innerHTML]='appSetng.orderplacedsms' class="orderDesc"></div>
+
+</ion-content>

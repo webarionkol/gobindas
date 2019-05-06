@@ -1,0 +1,17 @@
+<ion-menu persistent='true' id='menu' side="left" type='overlay' [content]="content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>{{appSetng.brandname}}</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content>
+    <ul class="menumines">
+      <li *ngFor="let p of pages" menuClose (click)="openPage(p)"><span><img src = "{{p.icon}}" item-left/>{{p.title}}</span></li>
+    </ul>
+  </ion-content>
+
+</ion-menu>
+
+<!-- Disable swipe-to-go-back because it's poor UX to combine STGB with side menus -->
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>

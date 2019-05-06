@@ -1,0 +1,105 @@
+page-developer {
+	.addLoc{
+		padding: 15px 0;
+		color: #545454;
+		font-size: 15px;
+		text-align: center;
+		ion-icon{
+			width: 100%;
+			font-size: 39px;
+			text-align: center;
+			color: #5d6198;
+		}
+	}
+	.phone{
+		position: relative;
+		font-size: 13px;
+		height: 40px;
+		line-height: 40px;
+		padding-left: 50px;
+		border: solid 1px #8bb8c7;
+		margin-bottom: 17px;
+		ion-icon{
+			position: absolute;
+			left: 0;
+			background: #8bb8c7;
+			width: 40px;
+			height: 39px;
+			color: #FFF;
+			text-align: center;
+			line-height: 39px;
+		}
+	}
+	.phntw{
+		border: solid 1px #9a83a2;
+		ion-icon{
+			background: #9a83a2;
+		}
+	}
+	.potrh{
+		border: solid 1px #9a83a2;
+		ion-icon{
+			background: #9a83a2;
+		}
+	}
+	.emlclr{
+		border: solid 1px #828ab9;
+		ion-icon{
+			background: #828ab9;
+		}
+	}
+
+	.website{
+		width: 25%;
+		height: 40px;
+		line-height: 40px;
+		text-align: center;
+		background: #8bb8c7;
+		color: #FFF;
+		float: left;
+	}
+	.fb{
+		width: 25%;
+		height: 40px;
+		line-height: 40px;
+		text-align: center;
+		background: #405d9a;
+		color: #FFF;
+		float: left;
+	}
+	.twitter{
+		width: 25%;
+		height: 40px;
+		line-height: 40px;
+		text-align: center;
+		background: #22a1f2;
+		color: #FFF;
+		float: left;
+	}
+	.linkedin{
+		width: 25%;
+		height: 40px;
+		line-height: 40px;
+		text-align: center;
+		background: #1777b5;
+		color: #FFF;
+		float: left;
+	}
+	.instragram{
+		width: 25%;
+		height: 40px;
+		line-height: 40px;
+		text-align: center;
+		background: #1777b5;
+		color: #FFF;
+		float: left;
+	}
+	.devLogos{
+		text-align: center;
+		width: 100%;
+		margin: 20px 0;
+		img{
+			height: 120px;
+		}
+	}
+}

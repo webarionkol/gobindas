@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-navbar color='mainTheme'>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Customer Reviews</ion-title>
+
+    <ion-buttons end class='topCartBtn'>
+      <button ion-button icon-only (click)="revwRwit()">
+        <ion-icon name="create"></ion-icon>
+      </button>
+    </ion-buttons>
+
+
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+<div class="reviwsDivs" *ngFor="let itm of catrData">
+	<div class="nameandStarts">
+		{{itm.name}} <span [innerHTML]='itm.rating'></span>
+	</div>
+	<div class="reviewsDesc">
+		{{itm.desc}}<br><span>{{itm.ratingdate}}</span>
+	</div>
+</div>
+</ion-content>

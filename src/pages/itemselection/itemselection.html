@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-navbar color='mainTheme'>
+    <ion-title>Choose an Option</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content>
+
+	<ion-card *ngFor='let slItm of chooseItem.selectList' [hidden]="slItm.currentPanel != myCard">
+	  <ion-card-header>
+	    {{slItm.selectCatName}} <span>- {{slItm.slQtyTxt}}</span>
+	  </ion-card-header>
+	  <ion-card-content>
+	    <ion-item *ngFor='let optSlc of slItm.allselectList'>
+		  <ion-label>{{optSlc.selectionName}} - <span [innerHTML]='appSetng.currency'></span>{{optSlc.selectionPrice}}</ion-label>
+		  <ion-checkbox color="dark" (click) = "pushSelect(optSlc,slItm.selectCatId)"></ion-checkbox>
+		</ion-item>
+	  </ion-card-content>
+		  <ion-row class="cardfooter" (click)="nextCards(slItm.selectQty,slItm.nextPanel)">
+		      <ion-col>
+		            <p>Next</p>
+		      </ion-col>
+	    </ion-row>
+	</ion-card>
+
+
+</ion-content>

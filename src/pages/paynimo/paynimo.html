@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-navbar color='mainTheme'>
+    <ion-title>Card Details</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content>
+	<div class="fullForm">
+		<label>Card holder name</label>
+		<ion-input type="text" [(ngModel)]="data.cardholder"></ion-input>
+	</div>
+	<div class="fullForm">
+		<label>Card Number</label>
+		<ion-input type="tel" maxlength='16' [(ngModel)]="data.cardnumber"></ion-input>
+	</div>
+	<div class="fullForm">
+		<label>Expiry Date</label>
+		<ion-datetime min='{{appSetng.todayDate}}' [(ngModel)]="data.expirydate" max='{{appSetng.maxDate}}' displayFormat="MM/YYYY" pickerFormat="MM/YYYY"></ion-datetime>
+	</div>
+	<ion-input type="hidden" value='Stripe' [(ngModel)]="data.getway"></ion-input>
+	<div class="fullForm">
+		<label>CVV</label>
+		<ion-input type="tel"  maxlength='3' [(ngModel)]="data.cvv"></ion-input>
+	</div>
+	<div class="payNow" (click)='checkPayment(data)'>
+		Make Payment (<span [innerHTML]='appSetng.currency'></span>{{payAmount}})
+	</div>
+
+	<div class="poweredBy">
+		powered by <img src="assets/icon/payment/Paynimo.png">
+	</div>
+
+
+</ion-content>

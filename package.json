@@ -1,0 +1,91 @@
+{
+  "name": "Govinda's",
+  "version": "0.0.1",
+  "author": "Ionic Framework",
+  "homepage": "http://ionicframework.com/",
+  "private": true,
+  "scripts": {
+    "clean": "ionic-app-scripts clean",
+    "build": "ionic-app-scripts build",
+    "lint": "ionic-app-scripts lint",
+    "ionic:build": "ionic-app-scripts build",
+    "ionic:serve": "ionic-app-scripts serve"
+  },
+  "dependencies": {
+    "@angular/animations": "5.2.11",
+    "@angular/common": "5.2.11",
+    "@angular/compiler": "5.2.11",
+    "@angular/compiler-cli": "5.2.11",
+    "@angular/core": "5.2.11",
+    "@angular/forms": "5.2.11",
+    "@angular/http": "5.2.11",
+    "@angular/platform-browser": "5.2.11",
+    "@angular/platform-browser-dynamic": "5.2.11",
+    "@ionic-native/app-rate": "^4.12.0",
+    "@ionic-native/clipboard": "^4.15.0",
+    "@ionic-native/core": "4.8.0",
+    "@ionic-native/device": "^4.12.0",
+    "@ionic-native/fcm": "^4.12.0",
+    "@ionic-native/geolocation": "^4.9.0",
+    "@ionic-native/in-app-browser": "^4.15.0",
+    "@ionic-native/native-page-transitions": "^4.12.0",
+    "@ionic-native/onesignal": "^4.20.0",
+    "@ionic-native/paypal": "^4.12.0",
+    "@ionic-native/push": "^4.9.2",
+    "@ionic-native/social-sharing": "^4.12.0",
+    "@ionic-native/splash-screen": "4.8.0",
+    "@ionic-native/status-bar": "4.8.0",
+    "@ionic-native/toast": "^4.16.0",
+    "@ionic/storage": "2.1.3",
+    "cordova-android": "7.1.4",
+    "cordova-clipboard": "^1.2.1",
+    "cordova-ios": "4.5.5",
+    "cordova-plugin-apprate": "~1.4.0",
+    "cordova-plugin-device": "2.0.2",
+    "cordova-plugin-fcm-with-dependecy-updated": "~2.2.4",
+    "cordova-plugin-geolocation": "~2.4.3",
+    "cordova-plugin-inappbrowser": "~3.0.0",
+    "cordova-plugin-ionic-keyboard": "2.0.5",
+    "cordova-plugin-ionic-webview": "1.1.19",
+    "cordova-plugin-splashscreen": "5.0.2",
+    "cordova-plugin-whitelist": "1.3.3",
+    "cordova-plugin-x-socialsharing": "~5.4.1",
+    "cordova-plugin-x-toast": "^2.7.0",
+    "ionic-angular": "3.9.2",
+    "ionicons": "3.0.0",
+    "onesignal-cordova-plugin": "2.4.6",
+    "phonegap-plugin-multidex": "^1.0.0",
+    "rxjs": "5.5.11",
+    "sw-toolbox": "3.6.0",
+    "zone.js": "0.8.26"
+  },
+  "devDependencies": {
+    "@ionic/app-scripts": "3.1.10",
+    "@ionic/lab": "1.0.24",
+    "typescript": "~2.6.2"
+  },
+  "description": "An Ionic project",
+  "cordova": {
+    "platforms": [
+      "ios",
+      "android"
+    ],
+    "plugins": {
+      "cordova-plugin-whitelist": {},
+      "cordova-plugin-device": {},
+      "cordova-plugin-splashscreen": {},
+      "cordova-plugin-ionic-webview": {},
+      "cordova-plugin-ionic-keyboard": {},
+      "cordova-plugin-geolocation": {
+        "GEOLOCATION_USAGE_DESCRIPTION": "To help us decide how quickly we can deliver the food to you and calculate any delivery charges based on your location"
+      },
+      "cordova-plugin-apprate": {},
+      "cordova-plugin-x-socialsharing": {},
+      "cordova-plugin-fcm-with-dependecy-updated": {},
+      "cordova-clipboard": {},
+      "cordova-plugin-inappbrowser": {},
+      "cordova-plugin-x-toast": {},
+      "onesignal-cordova-plugin": {}
+    }
+  }
+}

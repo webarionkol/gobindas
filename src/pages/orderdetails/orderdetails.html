@@ -1,0 +1,107 @@
+<ion-header>
+  <ion-navbar color='mainTheme'>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Invoice</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content>
+	<div class="brandName">
+		<span>{{catrData?.branchName}}</span>
+	</div>
+
+	<div class="invoiceTo">
+		<p>Invoce To</p>
+		<strong>{{catrData?.cusname}}</strong><br>
+		{{catrData?.cusaddress}}<br>
+		{{catrData?.cusphone}}<br>
+		{{catrData?.email}}
+	</div>
+	<div class="orderNumTrype">
+		<p>#{{catrData?.ordernumber}}</p>
+		<span>{{catrData?.orderType}}</span><br>
+		{{catrData?.orderStatus}}<br>
+		{{catrData?.orderDate}}<br>
+		<strong *ngIf='catrData?.eta'>ETA: {{catrData?.eta}}</strong>
+	</div>
+	<div class="clear"></div>
+	<div class="extraCmnt" *ngIf='catrData?.extraNote'>
+		** {{catrData?.extraNote}}
+	</div>
+	<div class="itmHeadasd">
+		<div class="itemHead">Item</div>
+		<div class="priceHead">Price</div>
+		<div class="qtyHead">QTY</div>
+		<div class="totalHead">Total</div>
+		<div class="clear"></div>
+	</div>
+	
+	<div class="itmdex" *ngFor='let itm of catrData?.productList'>
+		<div class="itemdesc">{{itm.productName}}</div>
+		<div class="pricedesc"><span [innerHTML]='appSetng.currency'></span>{{itm.price}}</div>
+		<div class="qtydesc">{{itm.quantity}}</div>
+		<div class="totaldesc"><span [innerHTML]='appSetng.currency'></span>{{itm.itemtotal}}</div>
+		<div class="clear"></div>
+
+
+		<div class="itemdesc">
+			<p *ngFor='let slitm of itm.selectList'>
+				{{slitm.selectionName}}
+			</p>
+		</div>
+		<div class="pricedesc">
+			<p *ngFor='let slitm of itm.selectList'>
+				<span [innerHTML]='appSetng.currency'></span>{{slitm.selectionPrice}}
+			</p>
+		</div>
+		<div class="qtydesc"><p *ngFor='let slitm of itm.selectList'>{{itm.quantity}}</p></div>
+		<div class="totaldesc">
+			<p *ngFor='let slitm of itm.selectList'>
+				+ <span [innerHTML]='appSetng.currency'></span>{{slitm.selectionTotal}}
+			</p>
+		</div>
+		<div class="clear"></div>
+
+
+	</div>
+	<div class="subtotal">
+		Subtotal: <span><b [innerHTML]='appSetng.currency'></b>{{catrData?.itemTotal}}</span>
+	</div>
+	<div class="clear"></div>
+
+	<div class="subtotal" *ngIf='catrData?.offertext'>
+		{{catrData?.offertext}}: <span>- <b [innerHTML]='appSetng.currency'></b>{{catrData?.offAmount}}</span>
+	</div>
+	<div class="clear"></div>
+
+
+	<div class="subtotal" *ngIf="catrData?.orderType=='Delivery'">
+		Shipping Cost: <span>+ <b [innerHTML]='appSetng.currency'></b>{{catrData?.deliverycost}}</span>
+	</div>
+
+	<div class="clear"></div>
+	<div class="subtotal">
+		Total pay: <span><b [innerHTML]='appSetng.currency'></b>{{catrData?.payAmount}}</span>
+	</div>
+	<div class="clear"></div>
+
+	<div class="delToTxt" *ngIf="catrData?.orderType=='Delivery'">
+		<span>Deliver To</span>
+	</div>
+
+
+	<div class="deliveTos" *ngIf="catrData?.orderType=='Delivery'">
+		<img src="assets/imgs/delicn.png">
+		
+		<strong>{{catrData?.delname}}</strong><br>
+		{{catrData?.deladdress}}<br>
+		{{catrData?.delmobile}}<br>
+		{{catrData?.delemail}}
+
+	</div>
+
+
+</ion-content>

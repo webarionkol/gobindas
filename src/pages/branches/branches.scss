@@ -1,0 +1,38 @@
+page-branches {
+	.brnImage{
+		width: 100%;
+		height: auto;
+		position: relative;
+		margin-bottom: 5px;
+		img{
+			width: 100%;
+		}
+		.name{
+			width: 100%;
+			height: auto;
+			background: rgba(0,0,0,0.7);
+			color: #FFF;
+			text-align: center;
+			line-height: 30px;
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index: 99;
+			border-top: solid 4px color($colors, secondary);
+		}
+		.adddress{
+			width: 100%;
+			height: auto;
+			background: rgba(0,0,0,0.7);
+			color: #FFF;
+			text-align: left;
+			line-height: 30px;
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			z-index: 99;
+			padding-left: 10px;
+			font-size: 12px;
+		}
+	}
+}

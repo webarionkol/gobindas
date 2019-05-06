@@ -1,0 +1,119 @@
+page-tablebooking {
+	.heading{
+		font-size: 14px;
+		margin-bottom: 9px;
+	}
+	.description{
+		font-size: 13px;
+		color: #676464;
+	}
+	ion-footer{
+		background: #171515;
+		color: #FFF;
+		text-align: center;
+	}
+
+	.myForms{
+		.relatives{
+			position: relative;
+			width: 100%;
+    		height: 40px;
+    		margin-bottom:10px;
+    		clear: both; 
+		}
+		ion-label{
+			letter-spacing: 2px;
+			text-transform: uppercase;
+			color: #676464;
+			font-size: 10px;
+			display: block;
+			margin-bottom: 5px;
+			width: 100%;
+		}
+
+		ion-input{
+			margin-bottom: 10px;
+			display: block;
+			border: 1px solid #dcd9d9;;
+			width: 100%;
+			height: 40px;
+
+			&::placeholder {
+			  color: #676464;
+			  font-size: 12px;
+			  letter-spacing: normal;
+			}
+
+			&[type="password"]{
+				letter-spacing: 4px;
+			}
+		}
+
+
+
+		ion-datetime{
+			margin-bottom: 10px;
+			display: block;
+			border: 1px solid #dcd9d9;;
+			width: 100%;
+			height: 40px;
+
+			&::placeholder {
+			  color: #676464;
+			  font-size: 12px;
+			  letter-spacing: normal;
+			}
+
+			&[type="password"]{
+				letter-spacing: 4px;
+			}
+		}
+	}
+	.logBtns{
+		width: 70%;
+		margin: 10px auto;
+		background: color($colors, mainTheme);
+		color: #FFF;
+		line-height: 37px;
+		text-align: center;
+	}
+
+
+	.nameemail{
+		float: left;
+		width: 40%;
+	}
+	.datetime{
+		float: left;
+		width: 40%;
+		span{
+			text-transform: uppercase;
+			font-size: 10px;
+		}
+	}
+	.numperson{
+		float: left;
+		width: 20%;
+		text-align: right;
+		font-size: 16px;
+		line-height: 13px;
+		span{
+			font-size: 10px;
+			text-transform: uppercase;
+		}
+	}
+	.clear{
+		clear: both;
+	}
+	.bookignLists{
+		padding: 10px 0;
+		font-size: 12px;
+		border-bottom: solid 1px #e4e4e4;
+	}
+	.notes{
+		font-size: 11px;
+		color: #588072;
+		width: 100%;
+		margin: 7px 0 0;
+	}
+}

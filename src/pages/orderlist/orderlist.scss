@@ -1,0 +1,45 @@
+page-orderlist {
+	.myOrders{
+		font-size: 13px;
+		padding: 7px 9px;
+		border-bottom: solid 1px #dcdcdc;
+		.orderNumber{
+			float:left;
+			width: 50%;
+			span{
+				font-size: 8px;
+				text-transform: uppercase;
+			}
+		}
+		.orderAmiunt{
+			float: right;
+			width: 50%;
+			text-align: right;
+			span{
+				font-size: 8px;
+				text-transform: uppercase;
+			}
+			b{
+				font-weight: normal;
+			}
+		}
+	}
+	.clear{
+		clear: both;
+	}
+	.newOrder{
+		color: #41658c;
+	}
+	.acceptOrder{
+		color: #95b146;
+	}
+	.processOrder{
+		color: #2d8c8e;
+	}
+	.completedOrder{
+		color: #607b5f;
+	}
+	.rejectedOrder{
+		color: #bfaaa7;
+	}
+}

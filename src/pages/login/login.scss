@@ -1,0 +1,65 @@
+page-login {
+	.logo{
+		text-align: center;
+		padding: 10% 15px;
+		font-weight: bold;
+		text-transform: uppercase;
+	}
+
+	/*.loginFields{
+		width: 79%;
+		border: solid 1px color($colors, secondary);
+		position: relative;
+		margin: 0 auto;
+		padding: 0 9px;
+		padding-left: 30px;
+		margin-bottom: 10px;
+
+		span{
+			position: absolute;
+			z-index: 999;
+			left: 10px;
+			top: 14px;
+			color: #4e4e4e;
+		}
+		ion-input{
+			height: 44px;
+		}
+		.text-input-md{
+			margin: 0 !important;
+			padding: 0;
+			height: 44px;
+		}
+	}*/
+
+	[type="password"]{
+				letter-spacing: 6px !important;
+			}
+	.loginBtn{
+		width: 100%;
+		background: color($colors, secondary);
+		position: relative;
+		margin: 0 auto;
+		padding: 0 9px;
+		text-align: center;
+		line-height: 40px;
+		color: #FFF;
+	}
+	.forgotAndSign{
+		width: 100%;
+		margin: 0 auto;
+		text-align: center;
+		line-height: 40px;
+		text-align: center;
+		font-size: 10px;
+		text-transform: uppercase;
+		.left{
+			text-align: left;
+			float: left;
+		}
+		.right{
+			text-align: right;
+			float: right;
+		}
+	}
+}

@@ -1,0 +1,77 @@
+page-stripecard {
+	.fullForm{
+		padding: 5px 3%;
+		position: relative;
+		margin-top: 10px;
+		label{
+			letter-spacing: 2px;
+			text-transform: uppercase;
+			color: #676464;
+			font-size: 10px;
+			display: block;
+			margin-bottom: 5px;
+			width: 100%;
+			text-transform: uppercase;
+		}
+
+		ion-input{
+			display: block;
+			border: 1px solid #dcd9d9;;
+			width: 100%;
+			height: 38px;
+			padding-left: 11px;
+
+			&::placeholder {
+			  color: #676464;
+			  font-size: 12px;
+			  letter-spacing: normal;
+			}
+
+			&[type="password"]{
+				letter-spacing: 6px !important;
+			}
+		}
+
+		.datetime-md {
+		    padding: 11px 8px 10px 10px;
+		}
+		.datetime-ios {
+		    padding: 11px 8px 10px 10px;
+		}
+
+		ion-datetime{
+			margin-bottom: 10px;
+			display: block;
+			border: 1px solid #dcd9d9;;
+			width: 100%;
+			height: 40px;
+
+			&::placeholder {
+			  color: #676464;
+			  font-size: 12px;
+			  letter-spacing: normal;
+			}
+
+			&[type="password"]{
+				letter-spacing: 4px;
+			}
+		}
+	}
+	.payNow{
+		width: 94%;
+		margin: 10px auto;
+		text-align: center;
+		background: color($colors, secondary);
+		color: #FFF;
+		line-height: 40px;
+		text-transform: uppercase;
+	}
+	.poweredBy{
+		text-align: center;
+		font-size: 13px;
+		img{
+			height: 60px;
+			vertical-align: middle;
+		}
+	}
+}

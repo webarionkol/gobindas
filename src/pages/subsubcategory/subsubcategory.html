@@ -1,0 +1,126 @@
+
+<ion-header>
+  <ion-navbar color='mainTheme'>
+    <ion-title>{{catName}}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content>
+	<ion-list class='categry'>
+	  <ion-item *ngFor='let catItem of catData' (click)="goNextPage(catItem)">
+	    <ion-thumbnail item-start>
+	      <img src="{{imgPath}}{{catItem.categoryImage}}">
+	    </ion-thumbnail>
+	    <h2>{{catItem.categoryName}}</h2>
+	    <p>{{catItem.shortDescription}} <br><span>{{catItem.eaiMenu}}</span></p>
+	  </ion-item>
+	</ion-list>
+
+
+	<ion-list class='categry'>
+	  <ion-item *ngFor='let itm of prdAta; let i = index'>
+	  	<div class="favoriteHeart" (click)='addtoFav(itm.productId,i)'>
+	        <ion-icon name="{{itm.fav}}"></ion-icon>
+	      </div>
+	    <ion-thumbnail item-start *ngIf="appSetng.productimage=='ON'">
+	      <img src="{{imgPath}}{{itm.productImage}}">
+	    </ion-thumbnail>
+	   <!--  <div *ngIf='itm.forOffer' class="isOfferDiv">
+	    	<span>%</span> {{itm.howMuchOff}}
+	    </div> -->
+	    <h2>{{itm.productName}}</h2>
+	    <p>{{itm.description}} <br><span>{{itm.eaiMenu}}</span></p>
+	    <div class="itemIcnos">
+	    	<img src="assets/imgs/{{itm.foodcategory}}" *ngIf='itm.foodcategory'>
+	    	<img src="assets/imgs/{{itm.chilli}}"*ngIf='itm.chilli'>
+	    	<img src="assets/imgs/{{itm.glueten}}"*ngIf='itm.glueten'>
+	    	<img src="assets/imgs/{{itm.lactose}}"*ngIf='itm.lactose'>
+
+	    </div>
+	    <!-- <div clear item-end>
+	    	<div class='itemPriceDivs'>
+	    		<span [innerHTML]='appSetng.currency'></span>{{itm.productPrice}}
+	    	</div>
+	    	<div class="addCartBtn" id="addBtnIdsbb_{{itm.productId}}" (click)='addToCart(itm)' [style.display]="itm.qty?'none':'inherit'">
+	    		<ion-icon name="add"></ion-icon> ADD
+	    	</div>
+	    	<div class="addCartBtnQtY"  id="qtyBtnIdsbb_{{itm.productId}}" [style.display]="!itm.qty?'none':'inherit'">
+	    		<span class='leftMinus' (click)='minusQty(itm)'>
+	    			<ion-icon name="remove"></ion-icon>
+	    		</span>
+	    		<span class='numberQty' id="prdQtysbb_{{itm.productId}}">{{itm.qty}}</span>
+	    		<span class='rightMiNus' (click)='plusQty(itm)'>
+	    			<ion-icon name="add"></ion-icon>
+	    		</span>
+	    	</div>
+	    	<div class="customizeoption" *ngIf='itm.hasSelection || itm.prdVarint'>Customizable</div>
+	    </div> -->
+
+
+
+	    <div clear item-end>
+        <div class='itemPriceDivs'>
+          <span [innerHTML]='appSetng.currency'></span>{{itm.productPrice}}
+        </div>
+        <div *ngIf='itm.hasslorvr'>
+          <div class="addCartBtn" (click)='addCustomize(itm)'>
+            <ion-icon name="add"></ion-icon> ADD
+          </div>
+        </div>
+
+        <div *ngIf='!itm.hasslorvr'>
+          <div class="addCartBtn" id="addBtnIdsbb_{{itm.productId}}" (click)='addToCart(itm)' [style.display]="itm.qty?'none':'inherit'">
+            <ion-icon name="add"></ion-icon> ADD
+          </div>
+          <div class="addCartBtnQtY"  id="qtyBtnIdsbb_{{itm.productId}}" [style.display]="!itm.qty?'none':'inherit'">
+            <span class='leftMinus' (click)='minusQty(itm)'>
+              <ion-icon name="remove"></ion-icon>
+            </span>
+            <span class='numberQty' id="prdQtysbb_{{itm.productId}}">{{itm.qty}}</span>
+            <span class='rightMiNus' (click)='plusQty(itm)'>
+              <ion-icon name="add"></ion-icon>
+            </span>
+          </div>
+        </div>
+        
+        <div class="customizeoption" *ngIf='itm.hasslorvr'>Customizable</div>
+      </div>
+	  </ion-item>
+	</ion-list>
+
+
+	<!-- <ion-grid>
+	  <ion-row>
+	    <ion-col col-6 *ngFor='let itm of prdAta' class='itemMainDivs'>
+	    	<div class="itemImg">
+	    		<img src="{{imgPath}}products/{{itm.productImage}}">
+	    	</div>
+	    	<div class="itemName">
+	    		<img src="assets/imgs/{{itm.foodcategory}}"> {{itm.productName}}
+	    	</div>
+	    	<div class="itenDesc">
+	    		{{itm.description}}
+	    	</div>
+	    	<div class="itemPrice">
+	    		<span [innerHTML]='appSetng.currency'></span>2.99
+	    	</div>
+	    	<div class="addtocartBtn">
+	    		<span><ion-icon name="cart"></ion-icon> Add</span>
+	    	</div>
+	    </ion-col>
+	  </ion-row>
+	</ion-grid> -->
+</ion-content>
+
+<ion-footer *ngIf='isCartVal'>
+  <ion-grid>
+  <ion-row>
+    <ion-col col-6>
+    	{{crtItmCnt}} Item <span class="margnLftRht">|</span> <span [innerHTML]='appSetng.currency'></span>{{crtTotal}}<br>
+    	<span class='extraNots'>Extra charges may apply</span>
+    </ion-col>
+     <ion-col col-6 class='viewFtrCrt' (click)='goCartPage()'>View Cart <ion-icon name="cart"></ion-icon></ion-col>
+  </ion-row>
+</ion-grid>
+</ion-footer>

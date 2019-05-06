@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-navbar color='mainTheme'>
+    <ion-title>Payment Options</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content>
+	<ion-list>
+	  <ion-item (click)="makePayment('PayPal')" class='paybyppl' *ngIf="appSetng.paypal=='ON'">
+	    <img src="assets/icon/payment/PayPal.png"> PayPal
+	  </ion-item>
+
+	  <ion-item (click)="makePayment('Wallet')" class='paybyppl' *ngIf="appSetng.wallet=='ON'">
+	    <img src="assets/icon/payment/Wallet.png"> Wallet <span>{{logedUser.wallet}} points</span>
+	  </ion-item>
+
+	  <!-- <ion-item (click)="makePayment('Stripe')" class='paybyppl' *ngIf="appSetng.stripe=='ON'">
+	    <img src="assets/icon/payment/Stripe.png"> Stripe
+		</ion-item> -->
+		
+		<ion-item (click)="makePayment('Stripe')" class='paybyppl' *ngIf="appSetng.stripe=='ON'">
+	    <img src="assets/icon/payment/Paynimo.png"> Paynimo
+	  </ion-item>
+
+	  <ion-item (click)="makePayment('Cash')" class='paybyppl' *ngIf="appSetng.cod=='ON'">
+	    <img src="assets/icon/payment/Cash.png"> Cash
+	  </ion-item>
+
+	  <ion-item (click)="makePayment('Card')" class='paybyppl' *ngIf="appSetng.paypal=='ON'">
+	    <img src="assets/icon/payment/Credit  Debit Card.png"> Credit / Debit Card
+	  </ion-item>
+	</ion-list>
+</ion-content>

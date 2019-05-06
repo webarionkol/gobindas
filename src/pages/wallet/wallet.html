@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-navbar color='mainTheme'>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Wallet</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content>
+	<div class="totalPoints">
+		{{logedUser.wallet}}<span>points</span>
+	</div>
+	<div class="dnarw">
+		<ion-icon name="arrow-round-down"></ion-icon>
+	</div>
+	<div class="pointWorth">
+	   	Worth <span [innerHTML]='appSetng.currency'></span><b>{{worthprice}}</b>
+   </div>
+
+
+   <div class="equivalent">
+	{{appSetng.pointforbuyitem}} Points = <span [innerHTML]='appSetng.currency'></span>1.00
+		<p>
+			<span>
+				Points automatically get added when you make an eligible order. If you want to add more points, you can buy them here
+			</span>
+		</p>
+	</div>
+
+	<div class="addPoint" (click)="openPointCalc()">
+		<span>Add Points</span>
+	</div>
+
+
+	
+</ion-content>

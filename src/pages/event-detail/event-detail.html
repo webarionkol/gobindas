@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-navbar color='mainTheme'>
+    <ion-title>Event Detail</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content >
+	<ion-list class='categry' *ngIf = "catItem">
+	  <ion-item>
+	    <ion-thumbnail item-start>
+	      <img src="{{imgPath}}{{catItem.image}}">
+      </ion-thumbnail>
+    </ion-item>
+    <ion-item>
+	    <h2>{{catItem.head}}</h2>
+	    <p class="desc">{{catItem.desc}} 
+      </p>
+      <p class="info">
+        <br>
+        <span>Date: {{catItem.date}}</span>
+        <span>&nbsp;  Time: </span>
+        <span>{{catItem.time}}</span>
+        <br>
+        <span>Address: {{catItem.address}}</span>
+        <br>
+        <span>Postcode: {{catItem.postcode}}</span>
+        <br>
+        <span>Remarks: {{catItem.remarks}}</span>
+      </p>
+	  </ion-item>
+	</ion-list>
+</ion-content>

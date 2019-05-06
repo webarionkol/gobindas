@@ -1,0 +1,19 @@
+
+<ion-header>
+  <ion-navbar color='mainTheme'>
+    <ion-title>Category</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content>
+	<ion-list class='categry'>
+	  <ion-item *ngFor='let catItem of catData' (click)="goNextPage(catItem)">
+	    <ion-thumbnail item-start>
+	      <img src="{{imgPath}}{{catItem.categoryImage}}">
+	    </ion-thumbnail>
+	    <h2>{{catItem.categoryName}}</h2>
+	    <p>{{catItem.shortDescription}} <br><span>{{catItem.eaiMenu}}</span></p>
+	  </ion-item>
+	</ion-list>
+</ion-content>

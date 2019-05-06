@@ -1,0 +1,39 @@
+page-wallet {
+	.totalPoints{
+		font-size: 40px;
+		text-align: center;
+		padding: 20px 0 0;
+		font-weight: bold;
+		text-transform: uppercase;
+		text-shadow: -1px 1px 0px #CCC;
+		color: color($colors, secondary);
+		span{
+			font-size: 11px;
+			text-shadow: 0px 0px 0px #FFF;
+			color: #424242;
+		}
+	}
+	.pointWorth{
+		text-align: center;
+		font-size: 35px;
+		span{
+			font-size: 25px;
+		}
+	}
+	.dnarw{
+		text-align: center;
+	}
+	.equivalent{
+		padding: 10px;
+		text-align: center;
+	}
+
+	.addPoint{
+		text-align: center;
+		span{
+			padding: 7px 15px;
+			color: #FFF;
+			background: color($colors, secondary);
+		}
+	}
+}	
